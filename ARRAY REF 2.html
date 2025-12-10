@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+// Function prototype
+int sumArray(int arr[], int size);
+
+int main() {
+    int numbers[5] = {10, 20, 30, 40, 50};
+    int total;
+
+    total = sumArray(numbers, 5);  // function call
+
+    printf("Sum of array elements = %d\n", total);
+
+    return 0;
+}
+
+// Function definition
+int sumArray(int arr[], int size) {
+    int sum = 0;
+    int i;  // declare loop variable outside for loop
+
+    for (i = 0; i < size; i++) {
+        sum += arr[i];
+    }
+
+    return sum;
+}
